@@ -1,0 +1,75 @@
+/**********  orders  **************/
+
+.orders_header{
+    background-image: url("../images/detail.png");
+}
+.receive_infor{
+    margin-top: 16px;
+}
+.receive_i_title{
+    height: 17px;
+    line-height: 17px;
+    border-bottom: 1px solid rgb(242,242,242);
+}
+.receive_i_c_top{
+    height: 28px;
+    line-height: 28px;
+    overflow: hidden;
+}
+.receive_i_c_bottom{
+    height: 48px;
+}
+.receive_g_i_title{
+    height: 29px;
+    line-height: 29px;
+    margin-top: 11px;
+}
+.receive_g_i_c_img{
+    width: 68px;
+    height: 68px;
+}
+.receive_g_i_c_img img{
+    width: 100%;
+}
+.receive_g_i_c_text{
+    margin-left: 12px;
+    padding: 12px 0;
+}
+.receive_g_i_content{
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.receive_price_num{
+    overflow: hidden;
+}
+.receive_g_i_c_text p:nth-child(2){
+    margin: 10px 0;
+    color:#95959c;
+    font-size: 10px;
+}
+.receive_deliver ul li{
+    height: 41px;
+    line-height: 41px;
+}
+.receive_d_total{
+    text-align: right;
+    font-size: 10px;
+}
+.receive_deliver ul li:not(last-child){
+    border-bottom:1px solid rgb(242,242,242);
+}
+.receive_d_time span:nth-child(2){
+    font-size: 10px;
+}
+.receive_d_total span:nth-child(2){
+    font-size: 20px;
+    color:#e60954;
+}
+.order_footer{
+    border-top: 1px solid rgb(242,242,242);
+}
+.order_sub{
+    background-image: url(../images/order_sub.png);
+    background-size: cover;
+    margin-top: 52px;
+}

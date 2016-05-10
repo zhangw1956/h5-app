@@ -1,0 +1,45 @@
+/**********  pay  **************/
+
+.pay_header{
+    background-image: url(../images/pay.png);
+}
+.pay_num{
+    height: 58px;
+    line-height: 58px;
+    overflow: hidden;
+}
+.pay_num span:nth-child(1){
+    color:#a4a6aa;
+}
+.pay_num span:nth-child(2){
+    font-weight: bold;
+    color:#e60954;
+    font-size: 14px;
+}
+.pay_way div:nth-child(1){
+    height: 25px;
+    margin-top: 20px;
+}
+.pay_way div:nth-child(2){
+    height: 55px;
+    border-top: 1px solid rgb(242,242,242);
+    overflow: hidden;
+    padding-top: 15px;
+}
+.pay_way_content span{
+    height: 14px;
+    display: block;
+    float: left;
+    margin-right: 8px;
+}
+.pay_logo{
+    width: 14px;
+    background-image: url(../images/pay_logo.png);
+    background-size: cover;
+}
+.pay_footer{
+    margin-top: 200px;
+}
+.pay_sub{
+    background-image: url(../images/pay_sub.png);
+}

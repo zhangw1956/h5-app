@@ -1,0 +1,26 @@
+/***********  success  ***********/
+
+.success_header{
+    background-image: url(../images/success.png);
+}
+.success_logo img{
+    width: 320px;
+}
+.order_num{
+    height: 58px;
+    line-height: 58px;
+}
+.order_form{
+    height: 92px;
+    padding-top: 20px;
+}
+.order_form div{
+    margin-top: 8px;
+}
+.success_footer{
+    padding-top: 120px;
+    /*background-color: rgb(242,242,242);*/
+}
+.success_sub{
+    background-image: url(../images/success_btn.png);
+}

@@ -1,0 +1,56 @@
+<!--  ***********************  添加地址页 address  *************************** -->
+
+<section id="address" class="section">
+    <header class="header address_header">
+        <div id="address_return" class="return" onclick="addressReturn()">
+            <img src="images/return.png" alt=""/>
+        </div>
+    </header>
+    <section class="pad">
+        <div class="address_notice">
+            <p>橙橙温馨提醒您填写真实身份信息，已确保货物的顺利到达</p>
+        </div>
+        <ul id="address_add" class="address_add">
+            <li>
+                <span>收货人</span>
+                <input type="text" name="address"/>
+            </li>
+            <li>
+                <span>联系电话</span>
+                <input type="text" name="address"/>
+            </li>
+            <li>
+                <span>*身份证号</span>
+                <input type="text" name="address"/>
+            </li>
+            <li class="over">
+                <div class="choice left">选择所在地</div>
+                <div class="info choice right">
+                    <select id="s_province" name="s_province"></select>
+                    <select id="s_city" name="s_city" ></select>
+                    <select id="s_county" name="s_county"></select>
+                    <script src="js/lib/area.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                        alert('1');
+
+                        alert(1);
+                    </script>
+                </div>
+            </li>
+            <li>
+                <span>选择街道</span>
+                <input type="text" name="address"/>
+            </li>
+            <li>
+                <span>详细地址</span>
+                <input type="text" name="address"/>
+            </li>
+        </ul>
+        <div class="address_warning">
+            <span class="leave">*请填写完整信息</span>
+        </div>
+    </section>
+    <footer class="address_footer">
+        <button id="address_sub" class="address_sub btn" onclick="addressBtn()"></button>
+    </footer>
+</section>

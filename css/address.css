@@ -1,0 +1,85 @@
+/***********  address  ***********/
+
+.address_header{
+    background-image: url(../images/address.png);
+}
+.address_notice{
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    color:#83b6e3;
+    font-size: 10px;
+    margin: 0 -18px;
+    padding: 0 18px;
+    background-color: rgb(242,242,242);
+}
+.address_add li{
+    height: 45px;
+    line-height: 45px;
+}
+.address_add li:not(last-child){
+    border-bottom: 1px solid rgb(242,242,242);
+}
+.address_add li span{
+    display: inline-block;
+    width: 65px;
+    color:#989898;
+}
+.address_add li input{
+    outline: none;
+    border: none;
+}
+.choice{
+    color:#989898;
+}
+.address_footer{
+    margin-top: 30px;
+}
+.address_sub{
+    background-image: url(../images/address_sub.png);
+    background-size: cover;
+    margin-top: 22px;
+}
+a{
+    color:#006600;
+    text-decoration:none;
+}
+a:hover{
+    color:#990000;
+}
+.top{
+    margin:5px auto;
+    text-align:center;
+}
+.info select{
+    border:1px #993300 solid;
+    background:#FFFFFF;
+    width: 55px;
+}
+.info{
+    text-align:center;
+}
+.info select{
+    font-size: 11px;
+    outline: none;
+}
+.info select:nth-child(3){
+    width: 65px;
+    overflow-x: scroll;
+}
+.info #show{
+    color:#3399FF;
+}
+.bottom{
+    text-align:right;
+    font-size:12px;
+    color:#CCCCCC;
+    width:1000px;
+}
+.address_warning{
+    width: 100%;
+    text-align: center;
+    color: #e60954;
+    height: 16px;
+    font-size: 16px;
+}

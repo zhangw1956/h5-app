@@ -1,0 +1,66 @@
+<!--  ***********************  商品详情页  orders  *************************** -->
+
+<section id="orders" class="section">
+    <header class="header orders_header">
+        <div id="orders_return" class="return" onclick="ordersReturn()">
+            <img src="images/return.png" alt=""/>
+        </div>
+    </header>
+    <section class="receive_infor pad">
+        <div class="receive_i_title">【收货详情】</div>
+        <div class="receive_i_content">
+            <div class="receive_i_c_top">
+                <div id="receive_i_c_name" class="receive_i_c_name left">吕玲玲（165***486）</div>
+                <div id="receive_i_c_phone" class="receive_i_c_phone right">138****123</div>
+            </div>
+            <div class="receive_i_c_bottom">
+                <span class="receive_i_c_unit">[公司]</span>
+                <span id="receive_i_c_address" class="receive_i_c_address">北京.北京市.海淀区西三环北路25号青政大厦9层蓝橙互联</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="line"></section>
+
+    <section class="orders_goods_infor pad">
+        <div class="receive_g_i_title">【商品信息】</div>
+        <div class="receive_g_i_content">
+            <div class="receive_g_i_c_img left">
+                <img src="images/goods.png" alt="" id="goods_img"/>
+            </div>
+            <div class="receive_g_i_c_text left">
+                <p id="orders_g_name">【可莱丝】茶树油面膜</p>
+                <p id="orders_g_discrip">MEDIHEAL/(美迪惠尔)原可莱丝。。</p>
+                <p class="receive_price_num">
+                    <span id="price" class="left">￥0</span>
+                    <span id="number" class="right">X1</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="line"></section>
+
+    <section class="receive_deliver pad">
+        <ul id="receive_d_way">
+            <li class="receive_d_way">
+                <span class="left">配送方式</span>
+                    <span class="right">
+                        <span id="post_way">快递 </span>
+                        <span id="post_cost">10.0元</span>
+                    </span>
+            </li>
+            <li class="receive_d_time">
+                <span class="left">配送时间</span>
+                <span id="post_time" class="right">16：00前付款预计4月22日（周五）送达</span>
+            </li>
+            <li class="receive_d_total">
+                共<span>1件</span>商品 合计：<span>￥<span id="orders_total">10.0</span>元</span>
+            </li>
+        </ul>
+    </section>
+
+    <footer class="order_footer">
+        <button id="orders_sub" class="order_sub pad btn" onclick="ordersBtn()"></button>
+    </footer>
+</section>

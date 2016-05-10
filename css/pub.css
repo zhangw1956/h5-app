@@ -1,0 +1,65 @@
+/**********   PUBLIC    **********/
+*{
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+html,body{
+    font-size: 14px;
+    width: 100%;
+    height: 100%;
+}
+.section{
+    width: 320px;
+    height: 100%;
+    /*overflow: hidden;*/
+    position: absolute;
+    background-color: white;
+}
+footer{
+    text-align: center;
+    background-color: white;
+    padding-bottom: 20px;
+}
+.pad{
+    padding: 0 18px;
+}
+.left{
+    float: left;
+}
+.right {
+    float: right;
+}
+.btn{
+    width: 282px;
+    height: 37px;
+    outline: none;
+    border:none;
+    background-size: cover;
+}
+.line{
+    height: 8px;
+    width: 100%;
+    background-color: rgb(242,242,242);
+}
+.over{
+    overflow: hidden;
+}
+.enter{
+    display:block;
+}
+.leave{
+    display:none;
+}
+
+
+
+
+
+

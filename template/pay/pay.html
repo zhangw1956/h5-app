@@ -1,0 +1,28 @@
+<!--  ***********************  结算中心页  pay    **************************** -->
+
+<section id="pay" class="section">
+    <header class="header pay_header">
+        <div id="pay_return" class="return" onclick="payReturn()">
+            <img src="images/return.png" alt=""/>
+        </div>
+    </header>
+    <section class="pay_num pad">
+        <span class="left">还需支付</span>
+        <span class="right">￥10.00</span>
+    </section>
+    <section class="line"></section>
+    <section class="pay_way pad">
+        <div>选择支付方式</div>
+        <div class="pay_way_content">
+                <span>
+                    <input value="pay_local" type="radio" name="pay_way" checked="true"/>
+                </span>
+                <span class="pay_logo">
+                </span>
+            <span class="pay_logo_infor">本地支付</span>
+        </div>
+    </section>
+    <footer class="pay_footer">
+        <button id="pay_sub" class="pay_sub btn"></button>
+    </footer>
+</section>
