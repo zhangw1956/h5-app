@@ -20,6 +20,9 @@ var orders = {};
 var pay={};
     pay.template = "template/pay/pay.html";
     pay.controller=payController;
+var paying = {};
+    paying.template = "template/paying/paying.html";
+    paying.controller = payingController;
 
 var success = {};
     success.template = "template/success/success.html";

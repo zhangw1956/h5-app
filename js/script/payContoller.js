@@ -22,30 +22,41 @@
             );
             return choice;
         };
-        payActive.pay_begin=function(data){
-            if(data){
-                this.pay_success();
-            }else{
-                this.pay_error();
-            }
-        };
-        payActive.pay_success=function(){
-            //通知 服务器 支付成功
-            public.ajax("","post",success,error);
-            // 生成最后订单详情
-            success.developOrders(data);
-            function success(){
-                pageChange('#pay','#success');
-            }
-            function error(){
-                alert("error");
-            }
-        };
-        payActive.pay_error=function(){
-            //alert("支付失败！");
-        };
+
         payActive.pay_way();
-        payActive.pay_begin();
+
+
+        html.payComplete=function(data){
+            if(data){
+                this.paySuccess();
+            }else{
+                this.payError();
+            }
+        };
+        html.paySuccess=function(){
+            //通知 服务器 支付成功
+            appFrame.http('','post','',orderSub);
+
+            function orderSub(status,json) {
+                if(status == 200) {
+                    location.hash = '';
+                } else {
+                    alert(json);
+                }
+            }
+
+        };
+        html.payError=function(){
+            alert("支付失败！");
+        };
+
+        /** ****  调用 native 支付接口  ***** **/
+
+        scope.payBtn = function(){
+
+            location.hash = '#paying';
+
+        };
         scope.payReturn = function(){
             location.hash='#orders';
         }

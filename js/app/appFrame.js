@@ -45,6 +45,7 @@ settings.divDemo = document.getElementById("views");      //div for loading part
 var appFrame = {};
 var appScope={};    //根对象
 var scope = window; //全局对象
+var html = {}; //app接口对象
 /**
  * 获取改变后的 url，先通过window[url]找到对应的对象（类似于最上部定义的home和notfound），
  * 如对象不存在（无定义的路径）则转到404处理，否则通过http方法获取window[url].template中定义的 html 片段并加载到局部刷新的div，

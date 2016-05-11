@@ -22,8 +22,20 @@
             $("#orders_total").html(data.price.now);
         };
         getData.addGoods(appScope.goods);
-        getData.addOrder(appScope.address);
+        if(typeof appScope.address !== 'undefined'){
+            getData.addOrder(appScope.address);
+        }else{
+            getData.addOrder(JSON.parse(sessionStorage.address));
+        }
+
         scope.ordersBtn = function(){
+            appScope.orders = {
+                num: '',
+                name:'',
+                card:'',
+                tell:'',
+                address:''
+            };
             location.hash = '#pay';
         };
         scope.ordersReturn = function(){

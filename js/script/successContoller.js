@@ -6,16 +6,11 @@
 
     successController = function(){
 
-        var developOrders=function(data){
-            $("#buyer_num").html(orders_num());
-            $("#buyer_name").html(data.name+"("+data.card+")");
-            $("#buyer_tell").html(data.tell);
-            $("#buyer_address").html(data.address);
-            function orders_num(){
-                return Math.round(Math.random()*90000000000000+10000000000000);
-            }
-        };
-        developOrders();
+        $("#buyer_num").html(appScope.orders.num);
+        $("#buyer_name").html(appScope.orders.name+"("+appScope.orders.card+")");
+        $("#buyer_tell").html(appScope.orders.tell);
+        $("#buyer_address").html(appScope.orders.address);
+
         scope.successReturn = function(){
             location.hash='#pay';
         }

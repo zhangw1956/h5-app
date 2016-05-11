@@ -42,7 +42,8 @@
                 + $("#s_county option:selected").text(),
                 street:$("#address_add input").eq(3).val(),
                 house:$("#address_add input").eq(4).val()
-            }
+            };
+            sessionStorage.address = JSON.stringify(appScope.address);
         };
 
         scope.addressBtn = function (){
