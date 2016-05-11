@@ -2,24 +2,8 @@
  * Created by dell on 2016/5/3.
  */
 
-var detail = {};
-    detail.template = "template/detail/detail.html";
-    detail.controller = function(){
-        appFrame.http("http://192.168.1.38/zero/php/pub.php","get","",callback);
-        function callback(status,json){
-            if(status == 200){
-                var data = JSON.parse(json);
-                appScope.goods = data;
-                /*************** 开始渲染页面数据 ************/
+    detailController = function(){
 
-                getData.getImage(data).getGoods(data).getPost(data);
-                orders.addGoods(data);
-            }
-            else{
-                console.log("请求失败");
-            }
-
-        }
         var getData={};
         getData.getImage = function(data){
             $("#detail_goods_img").attr("src",data.src);
@@ -37,5 +21,14 @@ var detail = {};
             $("#Logistical_return").html(data.isReturn);
             return this;
         };
+        scope.detailBtn = function(){
+            location.hash='#address';
+        };
+
+        /*************** 开始渲染页面数据 ************/
+
+        getData.getImage(appScope.goods).getGoods(appScope.goods).getPost(appScope.goods);
+
+
     };
 

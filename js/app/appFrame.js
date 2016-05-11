@@ -1,13 +1,50 @@
 /**
- * Created by dell on 2016/5/6.
- *
- * appFrame 库
+ * Created by dell on 2016/5/9.   v 1.0.0
+ */
+/************************************************************************
+ *                                                                      *
+ *                              appFrame                                *
+ *                                                                      *
+ ************************************************************************
+ */
+
+
+
+
+
+
+
+/**
+ * 定义缺省的两个页面片段（缺省页面和出错页面，这两个页面是基础功能，所以放在库里）相关代码，
+ * 对每个片段对应的url（例如home）定义一个同名的对象，里面存放了对应的 html 片段文件路径、初始化方法。
+ * 随后是全局变量，包含了 html 片段代码的缓存、局部刷新所在 div 的 DOM 对象和向后端服务请求返回的根数据（rootScope，
+ * 初始化时未出现，在后面的方法中才会用到）
+ */
+//var home = {};            //default partial page, which will be loaded initially
+//home.template = "";
+//home.controller = function(){   //bootstrap method
+//    //nothing but static content only to render
+//};
+//
+//var notFound = {};               //404 page
+//notFound.template = "";
+//notFound.controller = function(){
+//};
+var settings = {};               //global parameters
+settings.templateCache = {};      //cache for partial pages
+settings.divDemo = document.getElementById("views");      //div for loading partials, defined in index.html
+
+
+
+
+/**
+ * appFrame 主程序
  */
 
 // Main Object here
 var appFrame = {};
-var appScope={};
-
+var appScope={};    //根对象
+var scope = window; //全局对象
 /**
  * 获取改变后的 url，先通过window[url]找到对应的对象（类似于最上部定义的home和notfound），
  * 如对象不存在（无定义的路径）则转到404处理，否则通过http方法获取window[url].template中定义的 html 片段并加载到局部刷新的div，
@@ -22,8 +59,8 @@ appFrame.changeUrl = function() {          //handle url change
     if(!window[url]){
         url = "notFound";
     }
-
     appFrame.http(window[url].template, 'GET', '',function(status, page){
+
         if(status == 404){
             url = 'notFound';       //404 page
             appFrame.http(window[url].template,'GET','',function(status, page404){
@@ -98,7 +135,7 @@ appFrame.refresh = function(node, scope) {
     var children = node.childNodes;
     if(node.nodeType != 3){                            //traverse child nodes, Node.TEXT_NODE == 3
         for(var k=0; k<node.attributes.length; k++){
-            node.setAttribute(node.attributes[k].name, miniSPA.feedData(node.attributes[k].value, scope));       //replace variables defined in attributes
+            node.setAttribute(node.attributes[k].name, appFrame.feedData(node.attributes[k].value, scope));       //replace variables defined in attributes
         }
         if(node.hasAttribute('data-src')){
             node.setAttribute('src',node.getAttribute('data-src'));             //replace src attribute
@@ -174,6 +211,7 @@ appFrame.feedData = function(template, scope){                                  
 appFrame.initFunc = function(template) { //execute the controller function responsible for current template
     var fn = window[template].controller;
     if(typeof fn === 'function') {
+        scope = window;//初始化 全局变量scope
         fn();
     }
 };
