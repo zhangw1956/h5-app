@@ -20,6 +20,7 @@ var orders = {};
 var pay={};
     pay.template = "template/pay/pay.html";
     pay.controller=payController;
+
 var paying = {};
     paying.template = "template/paying/paying.html";
     paying.controller = payingController;
@@ -39,6 +40,7 @@ var home = {};            //default partial page, which will be loaded initially
 var notFound = {};               //404 page
     notFound.template = "template/404/404.html";
     notFound.controller = notFoundController;
+
 var settings = {};               //global parameters
     settings.templateCache = {};      //cache for partial pages
     settings.divDemo = document.getElementById("views");      //div for loading partials, defined in index.html

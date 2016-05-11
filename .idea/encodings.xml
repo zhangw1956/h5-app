@@ -3,7 +3,6 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/css/pub.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/js/app.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/js/app/appDefault.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/js/script/addressContoller.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/js/script/detailContoller.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/js/script/notFoundContoller.js" charset="UTF-8" />
